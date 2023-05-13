@@ -1,5 +1,5 @@
 <!-- <p>table works!</p> -->
-<table class="mx-5 my-3">
+<table class="mx-5 my-3 border border-dark">
     <thead class="border border-dark">
         <tr>
             <th class="border border-dark px-3 py-2">Title</th>
@@ -8,10 +8,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let data of events">
+        <tr *ngFor="let data of events" class="border border-dark">
             <td class="border border-dark px-3 py-2">{{data.title}}</td>
             <td class="border border-dark px-3 py-2">{{data.description}}</td>
-            <td class="border border-dark px-3 py-2"><img [src]="data.img" style="height: 100px;" alt="no file"></td>
+            <a routerLink=""><td class="px-3 py-2"><img src="{{data.img}}" style="height: 100px;" alt="{{data.img}}"></td></a>
         </tr>
     </tbody>
 </table>
