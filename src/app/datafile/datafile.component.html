@@ -1,0 +1,17 @@
+<form enctype="multipart/form-data" [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)" class="py-3 px-5 bg-light mx-5 border border-dark rounded-3">
+    <div>
+        <label for="title" class="fw-bold d-block">Title</label>
+        <input type="text" name="title" formControlName="title" class="mt-2">
+    </div><br>
+    <div>
+        <label for="description" class="fw-bold d-block">Description</label>
+        <textarea name="description" id="description" formControlName="description" class="mt-2"></textarea>
+    </div><br>
+    <div>
+        <label for="img" class="fw-bold d-block">Image</label>
+        <input type="file" name="img" formControlName="img" class="mt-2">
+    </div><br>
+    <div>
+        <button type="submit" [disabled]="!userForm.valid" class="bg-primary fw-bold rounded-3 px-3 py-2 f-bold text-white border-0">Submit</button>
+    </div>
+</form>

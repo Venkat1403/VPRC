@@ -1,0 +1,18 @@
+<!-- <p>table works!</p> -->
+<table class="mx-5 my-3">
+    <thead class="border border-dark">
+        <tr>
+            <th class="border border-dark px-3 py-2">Title</th>
+            <th class="border border-dark px-3 py-2">Description</th>
+            <th class="border border-dark px-3 py-2">Image Path</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of events">
+            <td class="border border-dark px-3 py-2">{{data.title}}</td>
+            <td class="border border-dark px-3 py-2">{{data.description}}</td>
+            <td class="border border-dark px-3 py-2"><img [src]="data.img" style="height: 100px;" alt="no file"></td>
+        </tr>
+    </tbody>
+</table>
+<li class="mx-5 my-3 list-unstyled" routerLinkActive="active"><a routerLink="/savedata">Click form page</a></li>
